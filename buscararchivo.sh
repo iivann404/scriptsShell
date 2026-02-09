@@ -7,6 +7,7 @@
 funcion() {
 
 local filename="$1"
+
 if [ -e "$filename" ]; then
   echo "$filename existe en la carpeta"
 else
@@ -16,6 +17,8 @@ fi
 }
 
 #Evento principal en el script
+
+
 if [ $# -eq 0 ]; then
   echo "Porfavor indica el nombre del archvio como argumento."
   exit 1
