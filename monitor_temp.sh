@@ -20,11 +20,11 @@ while true; do
   ps -arcwwwxo "command %cpu" | head -n 10
 
   echo ""
-  echo "🌡️ Sensores de temperatura (SMC) 🌡️:"
+  echo "🌡️ Sensores de temperatura (SMC) 🌡️ :"
   sudo powermetrics --samplers smc -n 1 2>/dev/null | grep -E "CPU die temperature|GPU die temperature|Fan"
 
   echo ""
-  echo "🌀 Estado de ventiladores:"
+  echo "🌀 Estado de ventiladores 🌀 :"
   sudo powermetrics --samplers smc -n 1 2>/dev/null | grep -i "fan"
 
   echo ""
